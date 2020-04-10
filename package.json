@@ -1,0 +1,51 @@
+{
+  "name": "electron-react-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/electron.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "electron-is-dev": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5"
+  },
+  "build": {
+    "appId": "com.electron-react",
+    "productName": "electron-react",
+    "win": {},
+    "mac": {},
+    "linux": {}
+  },
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "react-scripts build && electron-builder",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "electron": "^8.2.1",
+    "electron-builder": "^22.4.1",
+    "wait-on": "^4.0.2"
+  }
+}
