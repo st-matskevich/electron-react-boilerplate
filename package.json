@@ -23,7 +23,7 @@
     "linux": {}
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && webpack --mode development &&  electron .\"",
+    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && webpack --watch --mode development\" \"wait-on http://localhost:3000 &&  electron .\"",
     "build": "react-scripts build && webpack --mode production && electron-builder",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
